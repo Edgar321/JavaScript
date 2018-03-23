@@ -1,9 +1,9 @@
 function calculadora(){
-    
+
+
 var operandoa;
 var operandob;
 var operacion;
-
 var resultado = document.getElementById('display');
 var reset = document.getElementById('on');
 var suma = document.getElementById('mas');
@@ -26,70 +26,59 @@ var signo = document.getElementById('sign');
 var raiz = document.getElementById('raiz');
 
 uno.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "1";
+    escribir(1);
     uno.style.transform="scale(0.9)";
     setTimeout(function() {uno.style.transform="scale(1)";}, 200);
     
 }
 
 dos.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "2";
+    escribir(2);
     dos.style.transform="scale(0.9)";
     setTimeout(function() {dos.style.transform="scale(1)";}, 200);
 }
 tres.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "3";
+    escribir(3);
     tres.style.transform="scale(0.9)";
     setTimeout(function() {tres.style.transform="scale(1)";}, 200);
 }
 cuatro.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "4";
+    escribir(4);
     cuatro.style.transform="scale(0.9)";
     setTimeout(function() {cuatro.style.transform="scale(1)";}, 200);
 }
 cinco.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "5";
+    escribir(5);
     cinco.style.transform="scale(0.9)";
     setTimeout(function() {cinco.style.transform="scale(1)";}, 200);
 }
 seis.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "6";
+    escribir(6);
     seis.style.transform="scale(0.9)";
     setTimeout(function() {seis.style.transform="scale(1)";}, 200);
 }
 siete.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "7";
+    escribir(7);
     siete.style.transform="scale(0.9)";
     setTimeout(function() {siete.style.transform="scale(1)";}, 200);
 }
 ocho.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "8";
+    escribir(8);
     ocho.style.transform="scale(0.9)";
     setTimeout(function() {ocho.style.transform="scale(1)";}, 200);
 }
 nueve.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "9";
+    escribir(9);
     nueve.style.transform="scale(0.9)";
     setTimeout(function() {nueve.style.transform="scale(1)";}, 200);
 }
 cero.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + "0";
+    escribir(0);
     cero.style.transform="scale(0.9)";
     setTimeout(function() {cero.style.transform="scale(1)";}, 200);
 }
 punto.onclick = function(e){
-    if(resultado.textContent == 0){resultado.textContent="";}
-    resultado.textContent = resultado.textContent  + ".";
+    escribir(".");
     punto.style.transform="scale(0.9)";
     setTimeout(function() {punto.style.transform="scale(1)";}, 200);
 }
@@ -146,6 +135,16 @@ signo.onclick = function(e){
     setTimeout(function() {signo.style.transform="scale(1)";}, 200);
 }
 
+function escribir(valor_a_escribir){
+    if(resultado.textContent == 0){
+        resultado.textContent="";
+    }
+    if(resultado.textContent.length <= 7){
+        resultado.textContent=resultado.textContent + valor_a_escribir;
+    }
+}
+
+
 function limpiar(){
     resultado.textContent = "0";
   }
@@ -175,6 +174,7 @@ function limpiar(){
     resetear();
     resultado.textContent = res;
 }
-    
+
 }
+
 calculadora();
